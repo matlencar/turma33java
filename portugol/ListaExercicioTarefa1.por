@@ -3,9 +3,11 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro anos, meses, dias
+		inteiro anos
+		inteiro meses
+		inteiro dias
 
-		escreva("Quantos anos voce tem: ")
+		escreva("Quantos anos você tem meu amigo: ")
 		leia (anos)
 		
 		escreva("Amigo você possui "+ anos +" anos e quantos meses?:")
@@ -26,7 +28,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 415; 
+ * @POSICAO-CURSOR = 126; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
