@@ -28,7 +28,7 @@ programa
      inteiro a=2, b=1
      
 	
-
+	//exemplo
 	// Imprimimir Títulos
 	limpa()
 	escreva("\n◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾◻◾\n")
@@ -276,7 +276,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 5837; 
+ * @POSICAO-CURSOR = 1019; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {estoque, 9, 13, 7};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
