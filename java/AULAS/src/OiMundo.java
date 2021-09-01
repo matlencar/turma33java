@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class OiMundo {
 
 	public static void main(String[] args) {
-		
+		//teste
 		//variaveis
 		
 		Scanner leia = new Scanner(System.in);//instanciamento
