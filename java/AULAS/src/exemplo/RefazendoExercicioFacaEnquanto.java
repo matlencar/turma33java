@@ -8,7 +8,7 @@ public class RefazendoExercicioFacaEnquanto {
 		int numero =233;
 		
 			do {
-				if (numero >=300 && numero <=500) {
+				if (numero >=300 && numero <=400) {
 				numero = numero + 5;
 				}
 				else {
