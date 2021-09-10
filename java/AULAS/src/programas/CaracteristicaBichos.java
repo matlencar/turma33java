@@ -13,9 +13,8 @@ public class CaracteristicaBichos {
 		Cavalo cav = new Cavalo("Alipio",1);
 		Preguiça bicho = new Preguiça("Dona Preguiça",8);
 		
-		cao.correr();
-		
-
+		System.out.println(cav.toString());
+		cav.correr();
 	}
 
 }
