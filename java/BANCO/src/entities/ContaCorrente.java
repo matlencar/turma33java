@@ -22,14 +22,15 @@ public class ContaCorrente extends Conta {
 	
 	//metodos
 	public void Talao(int quantidadeTalao) {
-		 {
-			 if(quantidadeTalao <= 3) {
-                if(contadorTalao <= quantidadeTalao);
-                 this.debito(30);
-                 contadorTalao++;
-             }
-				
+		for(int x=3;x<=quantidadeTalao;x++) {
+			if(super.getSaldo()>=30.00) {
+				contadorTalao++;
+			}
+			else {
+				System.out.println("Sem saldo para retirada de tatão de cheque !!! ");
 			}
 		}
+	}
+}
 		
-	}	
+
