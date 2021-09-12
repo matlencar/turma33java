@@ -27,7 +27,10 @@ public class ContaEstudantil extends Conta {
 				public void usarEstudantil(double valorEmprestimo) {
 					if(valorEmprestimo <= limiteEstudantil) {
 						this.limiteEstudantil = limiteEstudantil - valorEmprestimo;
-						super.credito(valorEmprestimo);
+						super.credito(getSaldo()+valorEmprestimo);
+					}
+					else if(valorEmprestimo > limiteEstudantil) {
+						System.out.print("O valor desejado é maior que o limite disponível!");
 					}
 				}
 }

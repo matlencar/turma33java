@@ -1,31 +1,34 @@
 package entities;
 
-    public class ContaEmpresa extends Conta{
+public class ContaEmpresa extends Conta{
 
     //atributos
-    private double emprestimoEmpresa;
-    private double limiteAtual;
+    private  double emprestimoEmpresa;
 
-    //construtor
+    //construtores
     public ContaEmpresa(int numero, String cpf, double emprestimoEmpresa) {
         super(numero, cpf);
         this.emprestimoEmpresa = emprestimoEmpresa;
     }
+
     //encapsulamento
     public double getEmprestimoEmpresa() {
         return emprestimoEmpresa;
     }
 
-    public void setEmprestimoEmpresa(double emprestimoEmpresa){
+    public void setEmprestimoEmpresa(double emprestimoEmpresa) {
         this.emprestimoEmpresa = emprestimoEmpresa;
     }
+
     //metodos
-    public void pedirEmprestimo(double valorSolicitado) {
-
-            if (valorSolicitado <= limiteAtual) {
-                this.limiteAtual = (limiteAtual - valorSolicitado);
-                super.credito(getSaldo()+valorSolicitado);
-            }
-    	}
+    public void pedirEmprestimo(double emprestimo){
+    
+        if(emprestimo <= emprestimoEmpresa) {
+        this.emprestimoEmpresa -= emprestimo;
+        super.credito(emprestimo);
+        }
+        else if(emprestimo > emprestimoEmpresa) {
+            System.out.print("O valor desejado é maior que o limite disponível!");
+        }
     }
-
+}
