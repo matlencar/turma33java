@@ -47,7 +47,7 @@ public class Leitores {
 		this.resposta = resposta;
 	}
 
-	// M�todos
+	// Métodos
 	public void pegaQuantidade() {
 		quantidade = leiaQuantidade.nextInt();
 		this.setQuantidade(quantidade);
@@ -61,6 +61,10 @@ public class Leitores {
 	
 	public void pegaResposta() {
 		resposta = leiaResposta.next().toUpperCase().charAt(0);
+		while (resposta != 'N' && resposta != 'n' && resposta != 'S' && resposta != 's') {
+            System.out.print("\n\t\t\t ⛒ Opção Inválida, verifique e digite novamente:  ");
+            resposta = leiaResposta.next().charAt(0);
+        }
 		this.setResposta(resposta);
 	}
 }
