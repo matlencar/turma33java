@@ -1,4 +1,4 @@
-package app;
+package App;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -18,7 +18,7 @@ public class LaikaFast {
 		
 		Locale.setDefault(Locale.US);
 		Scanner leia = new Scanner(System.in);
-		Leitores leitor = new Leitores();
+		Leitores leitor = new Classes.Leitores();
 		Titulos titulo = new Titulos();
 		
 		String auxCod = "";
@@ -142,7 +142,7 @@ public class LaikaFast {
 							for (Produto item : carrinho) {
 								System.out.println("\n\t\t\t│ Cod. "+item.getCodigo() + "\t\tProduto: " + item.getNome() + "\t\tEm estoque: " +
 							+ item.getValor() + "\tValor: R$" + (item.getEstoque() * item.getValor())+"\t            │");
-								System.out.println("\n\t\t\t│ 📦 Quantidade selecionada:"+item.getEstoque()+"\t                                                                                    │"+"\n");
+								System.out.println("\n\t\t\t│ 📦 Quantidade selecionada:"+auxQtde+"\t                                                                                    │"+"\n");
 								valorTotal += (item.getValor() * item.getEstoque());
 							}
 							titulo.carrinhoValor();
