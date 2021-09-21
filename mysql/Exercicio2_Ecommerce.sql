@@ -20,4 +20,4 @@ insert into tb_loja(id_produto,nome,valor,quantidade,tipo) values(6,"PS4",3000.0
 insert into tb_loja(id_produto,nome,valor,quantidade,tipo) values(7,"Xbox One",17000.00,10,"Eletronicos");
 insert into tb_loja(id_produto,nome,valor,quantidade,tipo) values(8,"Nintendo Switch",2800.00,10,"Eletronicos");
 
-select * from tb_loja;
+select * from ecommerce.tb_loja;
