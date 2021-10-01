@@ -32,7 +32,8 @@ public class ControllerGames {
 		public ResponseEntity<List<CategoriaGames>> GetAll() {
 			return ResponseEntity.ok(repository.findAll());
 		
-	}
+		}
+		
 		@GetMapping("/{id}") 
 		public ResponseEntity<CategoriaGames> GetById(@PathVariable long id) {
 			return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
@@ -44,13 +45,13 @@ public class ControllerGames {
 		}
 		
 		@PostMapping
-		public ResponseEntity<CategoriaGames> post(@RequestBody CategoriaGames categoria) {
-			return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(categoria));
+		public ResponseEntity<CategoriaGames> post(@RequestBody CategoriaGames tb_categoria) {
+			return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(tb_categoria));
 		}
 		
 		@PutMapping
-		public ResponseEntity<CategoriaGames> put(@RequestBody CategoriaGames categoria) {
-			return ResponseEntity.status(HttpStatus.OK).body(repository.save(categoria));
+		public ResponseEntity<CategoriaGames> put(@RequestBody CategoriaGames tb_categoria) {
+			return ResponseEntity.status(HttpStatus.OK).body(repository.save(tb_categoria));
 		}
 		
 		@DeleteMapping("/{id}")
