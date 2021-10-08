@@ -29,6 +29,13 @@ public class Usuario {
 	@Size(min = 5, max = 100)
 	private String senha;
 
+	public Usuario(long id, String nome, String usuario, String senha) {
+		
+	}
+	
+	
+	public Usuario() {       }
+
 	public long getId() {
 		return id;
 	}
