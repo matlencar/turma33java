@@ -41,7 +41,8 @@ public class UsuarioControllerTeste {
 	public void start() {
 		
 		LocalDate dataAdmin = LocalDate.parse("1999-07-22", DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-		usuarioAdmin = new Usuario(0L,"Administrador","admin@email.com.br","admin123");
+		LocalDate dataPost;
+		usuarioAdmin = new Usuario(0L,"Administrador","admin@email.com.br","admin123",dataAdmin);
 		
 		if(!usuarioRepository.findByUsuario(usuarioAdmin.getUsuario()).isPresent()) {
 			
@@ -50,11 +51,11 @@ public class UsuarioControllerTeste {
 			
 		}
 		
-		LocalDate dataPost = LocalDate.parse("2000-07-22", DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-        usuario = new Usuario(0L, "Paulo Antunes", "paulo@email.com.br", "13465278");
+		LocalDate dataPost1 = LocalDate.parse("2000-07-22", DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        usuario = new Usuario(0L, "Paulo Antunes", "paulo@email.com.br", "13465278",dataPost1);
         
 		LocalDate dataPut = LocalDate.parse("2000-07-22", DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-        usuarioUpdate = new Usuario(2L, "Paulo Antunes de Souza", "paulo_souza@email.com.br", "souza123");
+        usuarioUpdate = new Usuario(2L, "Paulo Antunes de Souza", "paulo_souza@email.com.br", "souza123",dataPut);
 	}
 	
 	@Test
