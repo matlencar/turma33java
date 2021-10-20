@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.minhaLojaDeGames.ecommerceGames.model.CategoriaGames;
+import com.minhaLojaDeGames.ecommerceGames.model.Categoria;
 import com.minhaLojaDeGames.ecommerceGames.repository.RepositoryGames;
 
 public class ControllerGames {
@@ -29,28 +29,28 @@ public class ControllerGames {
 		RepositoryGames repository;
 		
 		@GetMapping
-		public ResponseEntity<List<CategoriaGames>> GetAll() {
+		public ResponseEntity<List<Categoria>> GetAll() {
 			return ResponseEntity.ok(repository.findAll());
 		
 		}
 		
 		@GetMapping("/{id}") 
-		public ResponseEntity<CategoriaGames> GetById(@PathVariable long id) {
+		public ResponseEntity<Categoria> GetById(@PathVariable long id) {
 			return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 		}
 		
 		@GetMapping("/descricao/{descricao}")
-		public ResponseEntity<List<CategoriaGames>> GetByTitulo(@PathVariable String descricao) {
+		public ResponseEntity<List<Categoria>> GetByTitulo(@PathVariable String descricao) {
 			return ResponseEntity.ok(repository.findAllByDescricaoContainingIgnoreCase(descricao));
 		}
 		
 		@PostMapping
-		public ResponseEntity<CategoriaGames> post(@RequestBody CategoriaGames tb_categoria) {
+		public ResponseEntity<Categoria> post(@RequestBody Categoria tb_categoria) {
 			return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(tb_categoria));
 		}
 		
 		@PutMapping
-		public ResponseEntity<CategoriaGames> put(@RequestBody CategoriaGames tb_categoria) {
+		public ResponseEntity<Categoria> put(@RequestBody Categoria tb_categoria) {
 			return ResponseEntity.status(HttpStatus.OK).body(repository.save(tb_categoria));
 		}
 		

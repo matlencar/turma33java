@@ -17,7 +17,7 @@ import com.sun.istack.NotNull;
 @Entity 
 @Table(name = "tb_categoria")
 
-public class CategoriaGames {
+public class Categoria {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
